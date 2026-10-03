@@ -1,0 +1,34 @@
+spring:
+  ai:
+    openai:
+      base-url: https://generativelanguage.googleapis.com/v1beta/openai
+      api-key: ${GEMINI_API_KEY}
+      chat:
+        options:
+          model: gemini-3.8-flash
+          temperature: 0.4
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 16MB
+  jackson:
+    default-property-inclusion: non_null
+
+code:
+  execution:
+    sandbox-url: ${SANDBOX_URL:https://wandbox.org/api/compile.json}
+
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        same-site: none
+        secure: false
+        http-only: true
+      tracking-modes: cookie
+
+logging:
+  level:
+    com.examhelper: INFO
+    org.springframework.ai: WARN

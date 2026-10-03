@@ -1,0 +1,121 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   tokens.css — Global Semantic Design Tokens
+   Two Primary Themes: "Pencil" (Light) & "ChatGPT Black" (Dark)
+   Consistent Interaction Accents (Header yellow-orange, Upload brown)
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── GLOBAL INTERACTION ACCENTS (DO NOT CHANGE WITH THEME) ─────────────── */
+  /* Header Button Hover: Subtle theme-aware neutral hover */
+  --accent-header-hover: var(--text);
+  --accent-header-hover-tint: var(--surface-raised);
+  --accent-header-hover-border: var(--border-hover);
+
+  /* File Drop / Upload Hover: Consistent warm saddle brown */
+  --accent-upload-hover: #92400E;
+  --accent-upload-border: #B45309;
+  --accent-upload-tint: rgba(180, 83, 9, 0.08);
+  --accent-upload-drag: rgba(180, 83, 9, 0.18);
+
+  /* Core Interactive Accent */
+  --accent: #3B82F6;
+  --accent-hover: #2563EB;
+  --accent-soft: rgba(59, 130, 246, 0.12);
+  --accent-border: rgba(59, 130, 246, 0.32);
+  --accent-primary: #3B82F6;
+
+  /* Universal Status Accents */
+  --success: #10B981;
+  --success-soft: rgba(16, 185, 129, 0.14);
+  --warning: #F59E0B;
+  --warning-soft: rgba(245, 158, 11, 0.14);
+  --danger: #EF4444;
+  --danger-soft: rgba(239, 68, 68, 0.14);
+
+  /* Transition timing */
+  --theme-transition: 200ms ease;
+
+  /* ─── LIGHT THEME — "Pencil" (Default) ─────────────────────────────────── */
+  /* Natural warm paper & graphite palette (no harsh pure #FFFFFF everywhere) */
+  --bg: #F4F1EA;
+  --bg-subtle: #EAE5DC;
+  --surface: #FCFAF7;
+  --surface-alt: #EFEBE3;
+  --surface-raised: #FFFFFF;
+  --surface-overlay: rgba(244, 241, 234, 0.92);
+
+  --border: #DDD7CD;
+  --border-subtle: #E8E3DA;
+  --border-hover: #C5BEB2;
+
+  --text: #1E2229;
+  --text-primary: #1E2229;
+  --text-secondary: #4A5160;
+  --text-muted: #737B8B;
+  --text-disabled: #A5ACB9;
+  --text-on-accent: #FFFFFF;
+
+  --avatar-glow: 0 0 28px rgba(37, 99, 235, 0.18);
+  --shine-highlight: none;
+
+  --shadow-sm: 0 1px 2px rgba(45, 40, 32, 0.05);
+  --shadow-md: 0 4px 10px -2px rgba(45, 40, 32, 0.08), 0 2px 4px -1px rgba(45, 40, 32, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(45, 40, 32, 0.12), 0 4px 8px -2px rgba(45, 40, 32, 0.06);
+}
+
+/* Explicit Pencil alias */
+[data-theme="pencil"], [data-theme="light"] {
+  --bg: #F4F1EA;
+  --bg-subtle: #EAE5DC;
+  --surface: #FCFAF7;
+  --surface-alt: #EFEBE3;
+  --surface-raised: #FFFFFF;
+  --surface-overlay: rgba(244, 241, 234, 0.92);
+
+  --border: #DDD7CD;
+  --border-subtle: #E8E3DA;
+  --border-hover: #C5BEB2;
+
+  --text: #1E2229;
+  --text-primary: #1E2229;
+  --text-secondary: #4A5160;
+  --text-muted: #737B8B;
+  --text-disabled: #A5ACB9;
+  --text-on-accent: #FFFFFF;
+
+  --avatar-glow: 0 0 28px rgba(37, 99, 235, 0.18);
+  --shine-highlight: none;
+
+  --shadow-sm: 0 1px 2px rgba(45, 40, 32, 0.05);
+  --shadow-md: 0 4px 10px -2px rgba(45, 40, 32, 0.08), 0 2px 4px -1px rgba(45, 40, 32, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(45, 40, 32, 0.12), 0 4px 8px -2px rgba(45, 40, 32, 0.06);
+}
+
+/* ─── DARK THEME — "ChatGPT Black" ───────────────────────────────────────── */
+/* Near-black graphite tone inspired by ChatGPT (no bright navy blue) */
+[data-theme="chatgpt-black"], [data-theme="dark"] {
+  --bg: #171717;
+  --bg-subtle: #121212;
+  --surface: #212121;
+  --surface-alt: #2B2B2B;
+  --surface-raised: #303030;
+  --surface-overlay: rgba(23, 23, 23, 0.92);
+
+  --border: #383838;
+  --border-subtle: #2C2C2C;
+  --border-hover: #4F4F4F;
+
+  --text: #ECECEC;
+  --text-primary: #ECECEC;
+  --text-secondary: #B4B4B4;
+  --text-muted: #8E8E8E;
+  --text-disabled: #5A5A5A;
+  --text-on-accent: #FFFFFF;
+
+  --avatar-glow: 0 0 36px rgba(59, 130, 246, 0.28);
+  --shine-highlight: none;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.65);
+}
